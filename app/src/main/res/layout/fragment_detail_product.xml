@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:paddingTop="@dimen/status_bar_height">
+
+    <ImageView
+        android:id="@+id/backButton"
+        style="@style/BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="@dimen/bias_parent_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productDetails"
+        style="@style/FeatureTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_detail"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guideline_start" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:requiresFadingEdge="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/product_image_top_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewsContainer"
+            android:layout_width="match_parent"
+            android:splitMotionEvents="false"
+            android:layout_height="@dimen/match_constraint">
+
+            <ImageView
+                android:id="@+id/imageProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/image_product_height"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="@dimen/height_percentage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/prepaidCardData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_data_corner"
+                app:cardElevation="@dimen/card_data_elevation"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="@dimen/card_view_margin_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageProduct">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:splitMotionEvents="false"
+                    android:padding="@dimen/card_data_padding">
+
+                    <TextView
+                        android:id="@+id/titleProduct"
+                        style="@style/ProductText.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="titulo titulo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/conditionTitle"
+                        style="@style/ProductText.DataTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_data_item_vertical_spacing"
+                        android:text="@string/condition"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleProduct" />
+
+                    <TextView
+                        android:id="@+id/condition"
+                        style="@style/ProductText.DataText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/card_horizontal_padding"
+                        app:layout_constraintBottom_toBottomOf="@id/conditionTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/conditionTitle"
+                        tools:text="Nuevo" />
+
+                    <TextView
+                        android:id="@+id/priceTitle"
+                        style="@style/ProductText.DataTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_data_icon_vertical_spacing"
+                        android:text="@string/price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/condition" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        style="@style/ProductText.DataText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/card_horizontal_padding"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTitle"
+                        tools:text="12334" />
+
+                    <TextView
+                        android:id="@+id/acceptMercadopagoTitle"
+                        style="@style/ProductText.DataTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_data_icon_vertical_spacing"
+                        android:text="@string/accept_mercadopago"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/price" />
+
+                    <TextView
+                        android:id="@+id/acceptMercadopago"
+                        style="@style/ProductText.DataText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/card_horizontal_padding"
+                        app:layout_constraintBottom_toBottomOf="@id/acceptMercadopagoTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/acceptMercadopagoTitle"
+                        tools:text="Si" />
+
+                    <TextView
+                        android:id="@+id/quantityTitle"
+                        style="@style/ProductText.DataTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_data_icon_vertical_spacing"
+                        android:text="@string/quantity"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/acceptMercadopago" />
+
+                    <TextView
+                        android:id="@+id/quantity"
+                        style="@style/ProductText.DataText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/card_horizontal_padding"
+                        app:layout_constraintBottom_toBottomOf="@id/quantityTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/quantityTitle"
+                        tools:text="12" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

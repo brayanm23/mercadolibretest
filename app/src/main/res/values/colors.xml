@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4b79fa</color>
+    <color name="colorPrimaryDark">#3556b7</color>
+    <color name="colorSecondary">#9cbefc</color>
+    <color name="colorAccent">#545ad1</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorBackgroundBase">@android:color/white</color>
+    <color name="colorControlHighlight">#797cda</color>
+    <color name="textColorInputHint">#cacaca</color>
+    <color name="textColorInputError">#EF2323</color>
+    <color name="colorTextBase">#6c6c6c</color>
+    <color name="textColorTitle">@color/colorPrimary</color>
+    <color name="newColorLightTextBase">#6f6f6f</color>
+    <color name="brightTextColor">#4b79fa</color>
+    <color name="preview">#55ccffff</color>
+    <color name="textColorDisabledTermsButton">#82A3CC</color>
+    <color name="colorScrollBar">#99B2FF</color>
+    <color name="brightButtonColor">#4b79fa</color>
+    <color name="colorButtonTerms">#DFE6F9</color>
+    <color name="colorGrayLight">#FFD5D5D5</color>
+    <color name="colorGray">#666666</color>
+    <color name="linkColorDark">#737373</color>
+    <color name="transaction_finish_text_color">#0ec1cb</color>
+    <color name="textColorButtonLogin">#5589ff</color>
+    <color name="colorControlNormal">#cacaca</color>
+    <color name="colorBackgroundBaseLight">#b3ffffff</color>
+    <color name="textColorInput">@color/colorTextBase</color>
+    <color name="productCardDataTextColor">#6c6c6c</color>
+    <color name="productTextColor">#737373</color>
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MercadoLibreTest</string>
+
+    <string name="loading_animation" translatable="false">loadingCircle.json</string>
+    <string name="search_product">Buscar Producto</string>
+    <string name="search">Buscar</string>
+    <string name="product_list">Lista de Productos</string>
+    <string name="error">Error</string>
+    <string name="button_error_primary">volver al inicio</string>
+    <string name="error_title">Parece que algo no salió como esperábamos</string>
+    <string name="error_subtitle">Intenta de nuevo mas tarde.</string>
+    <string name="result_no_found_title">No encontramos publicaciones</string>
+    <string name="result_no_found_subtitle">Revisa que las palabras esten bien escritas.</string>
+    <string name="product_detail">Detalle del Producto</string>
+    <string name="quantity">Cantidad</string>
+    <string name="price">Precio</string>
+    <string name="condition">Condicion</string>
+    <string name="accept_mercadopago">Acepta MercadoPago</string>
+    <string name="list_is_empty">No encontramos resultados para tu busqueda</string>
+    <string name="search_input_is_empty">El campo no puede ser vacio</string>
+
+</resources>

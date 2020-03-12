@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/errorIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_error"
+        android:layout_marginTop="@dimen/image_processing_error_margin_vertical"
+        android:layout_marginBottom="@dimen/image_processing_error_margin_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/ProcessingErrorTitle"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_marginStart="@dimen/processing_error_title_margin_default"
+        android:layout_marginEnd="@dimen/processing_error_title_margin_default"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/processing_error_title_margin_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/errorIcon"
+        app:layout_constraintBottom_toTopOf="@id/subtitle"
+        tools:text="titulo titulo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle"
+        style="@style/ProcessingErrorSubtitle"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/processing_error_title_margin_default"
+        android:layout_marginEnd="@dimen/processing_error_title_margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="subtitulo subtitulo" />
+
+
+    <TextView
+        android:id="@+id/mainButton"
+        style="@style/FeatureButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_m"
+        app:layout_constraintBottom_toTopOf="@id/secondaryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="volver al inicio" />
+
+    <TextView
+        android:id="@+id/secondaryButton"
+        style="@style/ProcessingErrorSecondaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="finalizar"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

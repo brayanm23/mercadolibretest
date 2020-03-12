@@ -1,0 +1,130 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ProcessingErrorSecondaryButton" parent="Title.Medium">
+        <item name="android:textColor">@color/brightButtonColor</item>
+        <item name="android:layout_marginBottom">
+            @dimen/processing_error_secondary_button_margin_bottom
+        </item>
+        <item name="android:layout_marginTop">@dimen/processing_error_secondary_button_margin_top
+        </item>
+        <item name="android:textSize">@dimen/textsize_m</item>
+    </style>
+
+    <style name="ProcessingErrorTitle" parent="Title.Medium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/textsize_xxl</item>
+        <item name="android:textColor">@color/brightButtonColor</item>
+    </style>
+
+    <style name="ProcessingErrorSubtitle" parent="Title.Medium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">@dimen/error_message_spacing_multiplier</item>
+        <item name="android:textSize">@dimen/textsize_m</item>
+        <item name="android:textColor">@color/linkColorDark</item>
+    </style>
+
+    <style name="Title.Medium" parent="Title">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Title" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/textColorTitle</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FeatureButton" parent="AppTheme.Button">
+        <item name="android:textSize">@dimen/feature_button_text_size</item>
+        <item name="android:textColor">@drawable/feature_button</item>
+        <item name="android:background">@drawable/feature_button_rounded</item>
+        <item name="android:layout_margin">@dimen/feature_button_horizontal_margin</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:minHeight">@dimen/rounded_button_min_height</item>
+        <item name="android:minWidth">@dimen/rounded_button_min_width</item>
+        <item name="android:layout_margin">@dimen/rounded_button_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">@dimen/rounded_button_elevation</item>
+        <item name="android:translationZ">@dimen/rounded_button_elevation</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="BackButton" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:src">@drawable/button_back_light</item>
+        <item name="android:background">@drawable/background_ripple</item>
+        <item name="android:paddingTop">@dimen/back_button_spacing_vertical</item>
+        <item name="android:paddingBottom">@dimen/back_button_spacing_vertical</item>
+        <item name="android:paddingStart">@dimen/back_button_spacing_horizontal</item>
+        <item name="android:paddingEnd">@dimen/back_button_spacing_horizontal</item>
+        <!--<item name="android:contentDescription">@string/back_button_title</item>-->
+    </style>
+
+    <style name="FeatureTitle" parent="Title.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBackgroundBase</item>
+        <item name="android:textSize">@dimen/feature_title_size</item>
+    </style>
+
+    <style name="Input" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="android:textSize">@dimen/textsize_m</item>
+        <item name="android:textColor">@color/textColorInput</item>
+    </style>
+
+    <style name="InputLayout" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        app:hintTextColor="@color/mycolor"
+        android:textColorHint="@color/text_input_hint_selector"
+        <item name="android:textColorHint">@color/textColorInputHint</item>
+        <item name="hintTextAppearance">@style/InputHintText</item>
+        <item name="boxBackgroundMode">none</item>
+    </style>
+
+    <style name="InputHintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/textColorInputHint</item>
+    </style>
+
+    <style name="CloseButton.Bright" parent="CloseButton">
+        <item name="android:tint">@color/colorBackgroundBase</item>
+    </style>
+
+    <style name="CloseButton" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/background_ripple</item>
+        <item name="android:src">@drawable/ic_button_close</item>
+        <item name="android:tint">@color/brightButtonColor</item>
+        <item name="android:padding">@dimen/close_button_padding</item>
+    </style>
+
+    <style name="ProductText.Title" parent="ProductText">
+        <item name="android:textColor">@color/productCardDataTextColor</item>
+        <item name="android:textSize">@dimen/textsize_xl</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProductText" parent="Title.Medium">
+        <item name="android:textColor">@color/productTextColor</item>
+    </style>
+
+    <style name="ProductText.DataTitle" parent="ProductText">
+        <item name="android:textColor">@color/productCardDataTextColor</item>
+        <item name="android:textSize">@dimen/textsize_s</item>
+    </style>
+
+    <style name="ProductText.DataText" parent="ProductText.Message">
+        <item name="android:textColor">@color/productCardDataTextColor</item>
+    </style>
+
+    <style name="ProductText.Message" parent="ProductText">
+        <item name="android:textSize">@dimen/textsize_m</item>
+    </style>
+
+</resources>

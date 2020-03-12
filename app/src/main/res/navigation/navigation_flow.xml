@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_flow"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.test.mercadolibre.view.SearchFragment"
+        tools:layout="@layout/fragment_search_product">
+        <action
+            android:id="@+id/action_searchFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.test.mercadolibre.view.ProductListFragment"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_unespectedErrorFragment"
+            app:destination="@id/unespectedErrorFragment"/>
+        <action
+            android:id="@+id/action_productListFragment_to_resultNoFoundFragment"
+            app:destination="@id/resultNoFoundFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.test.mercadolibre.view.DetailProductFragment"
+        tools:layout="@layout/fragment_detail_product">
+    </fragment>
+
+    <fragment
+        android:id="@+id/unespectedErrorFragment"
+        android:name="com.test.mercadolibre.view.UnespectedErrorFragment"
+        tools:layout="@layout/fragment_unespected_error">
+        <action
+            android:id="@+id/action_unespectedErrorFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@+id/searchFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultNoFoundFragment"
+        android:name="com.test.mercadolibre.view.ResultNoFoundFragment"
+        tools:layout="@layout/fragment_result_no_found">
+        <action
+            android:id="@+id/action_resultNoFoundFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@+id/searchFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

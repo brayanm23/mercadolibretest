@@ -1,0 +1,19 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorScrollBar">
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/rounded_button_radius" />
+                    <solid android:color="@color/colorButtonTerms" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/rounded_button_radius" />
+                    <solid android:color="@color/brightButtonColor" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

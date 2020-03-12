@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProcessingError">
+        <attr name="processingErrorIcon" format="integer" />
+        <attr name="processingErrorTitle" format="string" />
+        <attr name="processingErrorSubtitle" format="string" />
+        <attr name="processingErrorMainButton" format="string" />
+        <attr name="processingErrorSecondaryButton" format="string" />
+    </declare-styleable>
+</resources>
